@@ -9,9 +9,7 @@ const Dashboard = () => {
     <div className="flex flex-col lg:flex-row">
       <div className="w-full px-5 lg:py-5 py-2">
         <Header />
-        <br />
         <DateData />
-        <br />
         <MonthsData />
         <YearsData />
       </div>

@@ -7,7 +7,7 @@ import {
 
 const Header = () => {
   return (
-    <div className="flex">
+    <div className="flex mb-4">
       <div className="flex items-center">
         <FontAwesomeIcon
           icon={faTableColumns}

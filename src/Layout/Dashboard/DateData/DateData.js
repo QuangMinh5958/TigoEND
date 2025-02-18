@@ -36,7 +36,7 @@ const DateData = () => {
   ];
 
   return (
-    <div>
+    <div className="mb-4">
       <TitleData title={"Now"} />
       <div className="grid sm:grid-cols-4 grid-cols-2 gap-4  mt-3">
         {items.map((item) => (
