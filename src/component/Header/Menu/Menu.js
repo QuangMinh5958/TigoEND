@@ -22,18 +22,18 @@ import {
 
 const menuItems = [
   {
-    href: "",
+    path: "",
     text: "Hello fen",
     image:
       "https://cellphones.com.vn/sforum/wp-content/uploads/2024/02/avatar-anh-meo-cute-3.jpg",
     hasDividerBottom: true,
   },
-  { href: "/", text: "Trang chủ", icon: faHouse },
-  { href: "/dashboard", text: "Dashboard", icon: faTableColumns },
-  { href: "/admin", text: "Quản lý", icon: faUserTie },
-  { href: "/settings", text: "Cài đặt", icon: faGear },
-  { href: "/messages", text: "Tin nhắn", icon: faCommentDots },
-  { href: "/", text: "Đăng xuất", icon: faRightToBracket, hasDividerTop: true },
+  { path: "/", text: "Trang chủ", icon: faHouse },
+  { path: "/dashboard", text: "Dashboard", icon: faTableColumns },
+  { path: "/admin", text: "Quản lý", icon: faUserTie },
+  { path: "/settings", text: "Cài đặt", icon: faGear },
+  { path: "/messages", text: "Tin nhắn", icon: faCommentDots },
+  { path: "/", text: "Đăng xuất", icon: faRightToBracket, hasDividerTop: true },
 ];
 
 const Menu = () => {
@@ -55,7 +55,7 @@ const Menu = () => {
           <ListItemButton>
             <ListItemIcon>
               <div className="rounded-full overflow-hidden">
-                <img className="w-10 h-10" src={menuItems[0].image} />
+                <img className="w-10 h-10" src={menuItems[0].image} alt="" />
               </div>
             </ListItemIcon>
             <ListItemText primary={menuItems[0].text} />
@@ -68,7 +68,7 @@ const Menu = () => {
             <ListItem>
               <ListItemButton
                 component={NavLink}
-                to={item.href}
+                to={item.path}
                 onClick={toggleDrawer(false)}
               >
                 <ListItemIcon>
