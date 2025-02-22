@@ -81,15 +81,15 @@ const Header = () => {
         ))}
       </div>
 
-      <div className="hidden sm:flex lg:flex justify-center items-center lg:my-5">
-        <a
-          className="flex justify-center items-center lg:block py-2 px-4 rounded-full border lg:px-8 lg:py-2 font-medium hover:bg-black hover:text-hr"
-          href="/"
-        >
+      <a
+        href="/login"
+        className="hidden sm:flex lg:flex justify-center items-center lg:my-5"
+      >
+        <div className="flex justify-center items-center lg:block py-2 px-4 rounded-full border lg:px-8 lg:py-2 font-medium hover:bg-black hover:text-hr">
           <FontAwesomeIcon icon={faRightToBracket} className="pr-2" />
           <span>Logout</span>
-        </a>
-      </div>
+        </div>
+      </a>
 
       <div className="sm:hidden">
         <Menu />
