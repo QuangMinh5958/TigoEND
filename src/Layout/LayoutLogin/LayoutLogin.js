@@ -66,7 +66,7 @@ const LayoutLogin = () => {
           )}
           <input
             style={{ backgroundColor: "#f4ebca" }}
-            className="h-8 rounded-sm mt-5 mb-10 text-[#5c5d51]"
+            className="h-8 rounded-sm mt-5 text-[#5c5d51]"
             type="password"
             placeholder="passwork..."
             value={password}
@@ -77,7 +77,7 @@ const LayoutLogin = () => {
           )}
           <div
             onClick={handleSubmit}
-            className="bg-[#5c5d51] flex justify-center items-center rounded-sm py-1 cursor-pointer"
+            className="bg-[#5c5d51] flex justify-center mt-10 items-center rounded-sm py-1 cursor-pointer"
           >
             <div className="text-hr">logout</div>
           </div>
