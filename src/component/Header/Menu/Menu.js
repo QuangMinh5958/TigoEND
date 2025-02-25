@@ -1,5 +1,5 @@
 import * as React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
@@ -33,14 +33,25 @@ const menuItems = [
   { path: "/admin", text: "Quản lý", icon: faUserTie },
   { path: "/settings", text: "Cài đặt", icon: faGear },
   { path: "/messages", text: "Tin nhắn", icon: faCommentDots },
-  { path: "/", text: "Đăng xuất", icon: faRightToBracket, hasDividerTop: true },
+  {
+    path: "/login",
+    text: "Đăng xuất",
+    icon: faRightToBracket,
+    hasDividerTop: true,
+  },
 ];
 
 const Menu = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    return navigate("/login");
   };
 
   const DrawerList = (
@@ -69,7 +80,9 @@ const Menu = () => {
               <ListItemButton
                 component={NavLink}
                 to={item.path}
-                onClick={toggleDrawer(false)}
+                onClick={
+                  item.path === "/login" ? handleLogout : toggleDrawer(false)
+                }
               >
                 <ListItemIcon>
                   <FontAwesomeIcon icon={item.icon} />

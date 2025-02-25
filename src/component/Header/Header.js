@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Menu from "./Menu";
 
-const Header = ({ han }) => {
+const Header = () => {
   const items = [
     {
       id: 1,
